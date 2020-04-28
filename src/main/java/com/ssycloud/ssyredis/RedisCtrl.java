@@ -54,7 +54,7 @@ public class RedisCtrl {
     @GetMapping("/getRedisList/{keyStr}/{index}")
     public String getRedisList(@PathVariable("keyStr") String key, @PathVariable("index") long index) {
         redisService.getRedisList(key,index);
-        return key+index;
+        return key+"副分支3";
 
     }
 
@@ -68,6 +68,6 @@ public class RedisCtrl {
     @GetMapping("/checkRedisLock/{keyStr}/{timemil}")
     public String checkRedisLock(@PathVariable("keyStr") String key, @PathVariable("timemil") long timemil) {
         redisService.checkRedisLock(key,timemil);
-        return key+"主分支3";
+        return key+"主分支3-1";
     }
 }
