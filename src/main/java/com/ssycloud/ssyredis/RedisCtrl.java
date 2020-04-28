@@ -68,7 +68,7 @@ public class RedisCtrl {
     @GetMapping("/checkRedisLock/{keyStr}/{timemil}")
     public String checkRedisLock(@PathVariable("keyStr") String key, @PathVariable("timemil") long timemil) {
         redisService.checkRedisLock(key,timemil);
-        return key+"分支";
+        return key+"主分支1";
 
     }
 }
